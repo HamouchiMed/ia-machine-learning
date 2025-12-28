@@ -126,4 +126,12 @@ def get_quiz(difficulty):
 
 if __name__ == '__main__':
     db.init_db()
-    app.run(host='0.0.0.0', debug=True)
+    print("=" * 50)
+    print("Starting Flask server...")
+    print("Server will be available on:")
+    print("  - http://127.0.0.1:5000 (localhost)")
+    print("  - http://10.0.2.2:5000 (Android emulator)")
+    print("  - http://<your-ip>:5000 (physical device)")
+    print("=" * 50)
+    print("Press CTRL+C to stop the server")
+    app.run(host='0.0.0.0', port=5000, debug=True)
